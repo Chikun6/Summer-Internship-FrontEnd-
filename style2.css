@@ -1,0 +1,55 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+    background-image: url("IMG_20240630_193747.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size : cover;
+    background-attachment: scroll;
+    box-sizing: border-box;
+}
+main{
+    padding: 30px;
+}
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: larger;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    color: aliceblue;
+    background-color: #070606;
+}
+.sitename{
+    text-align: left;
+    font-size: 30px;
+    font-weight: 400;
+    text-decoration-color: azure;
+}
+.content{
+    font-size:x-large;
+    font-weight:bold ;
+
+}
+.form{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    padding: 20px;
+    margin: 0;
+    font-size: larger;
+    text-align: justify;
+}
+footer {
+    text-align: center;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    background-color: #4c4747ef;
+    font-size: 12px;
+}

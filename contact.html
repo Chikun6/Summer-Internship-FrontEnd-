@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="logo" width="50px" height="50px">
+        </div>
+        <div class="sitename">&nbsp;CONTACT</div>
+    </header>
+    <main>
+        <section class="content">
+            <p>
+                Thanks for exploring our website<br>If you have any problem feel free to contact us..<br>
+            we will respond as soon as possible <br><br></p>
+        </section>
+        <section class="form">
+                <form action="javascript:submitForm()" onsubmit="return validate()">
+                    <label for="name">Name : </label> 
+                    <input type="text" name="name" id="name" placeholder="Eg: chikun" required><br><br>
+                    <label for="email"> Email : </label>
+                    <input type="text" name="email" id="email" placeholder="Eg: chikun@gmail" required><br><br>
+                    <label for="genre">Favourite genre: </label>
+                    <input list="movies" name="movie" id="movie">
+                    <datalist id="movies">
+                        <option value="horror">
+                        <option value="fictional">
+                        <option value="fantasy">
+                        <option value="thriller">
+                        <option value="romance">
+                    </datalist><br><br>
+                    <input type="checkbox"><label>Subscribe to our NewsLetter via Email</label><br><br>
+                    <input type = "submit" name = "submit" value = "Submit">
+                </form><br><br><br><br><br><br>
+
+        </section>
+        <section>
+            <div>
+                <footer><h5>Copyrights ©2024 Crypto-World All rights reserved</h5>
+                </footer>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>
