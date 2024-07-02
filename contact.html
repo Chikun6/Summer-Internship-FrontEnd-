@@ -13,20 +13,23 @@
         </div>
         <div class="sitename">&nbsp;CONTACT</div>
     </header>
-    <main>
-        <section class="content">
+    <div class="main">
+        <div class="content">
             <p>
-                Thanks for exploring our website<br>If you have any problem feel free to contact us..<br>
-            we will respond as soon as possible <br><br></p>
-        </section>
-        <section class="form">
+              <b>  Thanks for exploring our website<br>If you have any problem feel free to contact us..<br>
+            we will respond as soon as possible </p></p>
+        </div>
+        <div>
+            <label><h3>FORM</h3></label>
+        </div>
+        <div class="form">
                 <form action="javascript:submitForm()" onsubmit="return validate()">
-                    <label for="name">Name : </label> 
+                   <label for="name">Name : </label> 
                     <input type="text" name="name" id="name" placeholder="Eg: chikun" required><br><br>
                     <label for="email"> Email : </label>
                     <input type="text" name="email" id="email" placeholder="Eg: chikun@gmail" required><br><br>
                     <label for="genre">Favourite genre: </label>
-                   <input list="cryptos" name="crypto" id="crypto">
+                    <input list="cryptos" name="crypto" id="crypto">
                     <datalist id="cryptos">
                         <option value="Bitcoin">
                         <option value="Ethereum">
@@ -35,18 +38,15 @@
                         <option value="Cardano">
                         <option value="Mitosis">
                     </datalist><br><br>
-                    <input type="checkbox"><label>Subscribe to our NewsLetter via Email</label><br><br>
+                    <label><input type="checkbox" >Subscribe to our NewsLetter via Email</label><br><br>
                     <input type = "submit" name = "submit" value = "Submit">
-                </form><br><br><br><br><br><br>
-
-        </section>
-        <section>
+                </form><br>
+        </div>
             <div>
-                <footer><h5>Copyrights ©2024 Crypto-World All rights reserved</h5>
-                </footer>
+                <h5>Copyrights ©2024 Crypto-World All rights reserved</h5>
             </div>
         </section>
-    </main>
+    </div>
     
 </body>
 </html>
