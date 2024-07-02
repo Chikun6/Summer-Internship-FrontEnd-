@@ -36,14 +36,39 @@ header {
     font-weight:bold ;
 
 }
-.form{
+.main{
+    text-align: center;
+    border: 1px solid #070606;
+    max-width: 600px;
+    margin: 50px auto;  
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: rgb(34, 147, 155);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     padding: 20px;
     margin: 0;
     font-size: larger;
-    text-align: justify;
+}
+input[type="submit"]{
+    padding: 10px 20px;
+    background-color: aqua;
+    font-size: medium;
+}
+input[type="text"]{
+    padding: 7px 15px;
+}
+input[type="list"]{
+    padding: 7px 15px;
 }
 footer {
     text-align: center;
