@@ -1,5 +1,4 @@
 body{
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     font-size: medium;
@@ -17,7 +16,7 @@ header {
     padding: 10px;
     position: relative;
     z-index: 1;
-    color: aliceblue;
+    color: rgb(97, 116, 135);
     background-color: #070606;
 }
 
@@ -28,10 +27,11 @@ header {
     text-decoration-color: azure;
 }
 .contact a{
+    font-family :monospace;
     text-align: right;
     font-size: larger;
     font-weight: 400;
-    color: aliceblue;
+    color: rgb(106, 130, 150);
     text-decoration-line: none;
 }
 
@@ -42,7 +42,7 @@ main {
 .welcome {
     text-align: center;
     margin-bottom: 20px;
-    color: white;
+    color: rgb(7, 129, 143);
     font-size: 50px;
     font-style: italic;
 }
@@ -51,6 +51,13 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+
+}
+.text-block , .image-block, .image-block2{
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: aqua;
 }
 
 .text-block p {
