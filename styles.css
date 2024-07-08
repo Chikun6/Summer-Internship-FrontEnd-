@@ -1,0 +1,346 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar .nav-item {
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #eee;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.sidebar {
+    width: 250px;
+    margin-left: 1px;
+    background-color: purple;
+    position: fixed;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.sidebar .nav-item:hover{
+    background-color: rgb(154, 100, 154);
+}
+.sidebar .nav-item.active {
+    background-color: #ff6695;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+    overflow-y: scroll;
+    overflow-x: no3ne;
+    height: 100vh;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo h2 {
+    margin: 0;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+}
+
+nav ul li.active a {
+    background-color: #E090A9;
+    color: white;
+}
+
+nav ul li a:hover {
+    background-color: #C6C6C6;
+}
+
+.my-account {
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - 40px);
+}
+
+.my-account a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #F7F7F7;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+header input {
+    padding: 10px;
+    border: 1px solid #C6C6C6;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+header button {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.card.green {
+    background-color: #36b554;
+}
+
+.card.blue {
+    background-color: #358593;
+}
+
+.card.red {
+    background-color: #cc9298;
+}
+
+.tables {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.table {
+    flex: 1;
+    margin: 0 10px;
+    background-color: rgba(127, 193, 247,0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table h3 {
+    font-size: 1.25em;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table table th, .table table td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+}
+
+.table table th {
+    background-color: #7f7b7b;
+    color: #333;
+}
+
+.media {
+    margin: 20px 0;
+}
+
+.media h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.media-cards {
+    font-size: 1.5em;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.heading{
+    border: 1px solid black;
+    background-color: rgb(219, 35, 35);
+    padding: 5px 20px;
+    margin:10px;
+    border-radius: 5px;
+}
+.media-card {
+    flex: 1;
+    padding: 20px;
+    background-color: #eebe22d2;
+    border-radius: 10px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.media-card h4 {
+    margin: 0 0 10px;
+    color: #856404;
+}
+
+.media-card p {
+    margin: 0;
+    color: #856404;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination button {
+    background-color: #B18FCF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.pagination button:hover {
+    background-color: #7463A4;
+}
+.media {
+    /*margin-left: 220px;*/
+    padding: 20px;
+}
+.media-section {
+    margin-bottom: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.media-section h2 {
+    background-color: #f7e3a4;
+    padding: 10px;
+    margin: 0;
+}
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+.media-grid img {
+    width: 100%;
+    height: 300px;
+    border: 1px solid rgba(66, 49, 49, 0.958);
+    border-radius: 10px;
+}
+.account-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.account-section img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    
+}
+.account-section h2 {
+    text-align: center;
+    color: #333;
+}
+.account-section label {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.account-section input {
+    background-color:rgba(251, 255, 255, 0.5);
+    width: 60%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.account-section .edit-btn {
+    cursor: pointer;
+    margin-left: 10px;
+}
+.account-section .actions {
+    text-align: center;
+    margin-top: 20px;
+}
+.account-section .actions button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.account-section label{
+    font-size: 1.5em;
+    font-family: monospace;
+}
+.account-section .actions .save-btn {
+    border: 1px solid green;
+    background-color: #4CAF50;
+}
+.account-section .actions .cancel-btn {
+    border: 1px solid red;
+    background-color: #f44336;
+}
+.account-section{
+    background-color: #4aa2cb;
+}

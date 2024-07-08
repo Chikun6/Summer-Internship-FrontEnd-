@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Page Load</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+        }
+        .content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="loadContent('home')">Home</a></li>
+            <li><a href="#" onclick="loadContent('about')">About</a></li>
+            <li><a href="#" onclick="loadContent('services')">Services</a></li>
+            <li><a href="#" onclick="loadContent('contact')">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="home" class="content active">Welcome to the Home page!</div>
+    <div id="about" class="content">About us content goes here.</div>
+    <div id="services" class="content">Our services are listed here.</div>
+    <div id="contact" class="content">Contact us through this form.</div>
+
+    <script>
+        function loadContent(sectionId) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="stylesheet1.css">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li class="nav-item active" onclick="showContent('home')">Home</li>
+            <li class="nav-item" onclick="showContent('customer')">Customer</li>
+            <li class="nav-item" onclick="showContent('department')">Department</li>
+            <li class="nav-item" onclick="showContent('media')">Media</li>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="home" class="content-item active">
+            <h1>Home</h1>
+            <p>Welcome to the Home page!</p>
+        </div>
+        <div id="customer" class="content-item">
+            <h1>Customer</h1>
+            <p>Welcome to the Customer page!</p>
+        </div>
+        <div id="department" class="content-item">
+            <h1>Department</h1>
+            <p>Welcome to the Department page!</p>
+        </div>
+        <div id="media" class="content-item">
+            <h1>Media</h1>
+            <p>Welcome to the Media page!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+-->
