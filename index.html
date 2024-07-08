@@ -1,106 +1,447 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Page Load</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin-right: 20px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        .content {
-            display: none;
-            padding: 20px;
-        }
-        .content.active {
-            display: block;
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="#" onclick="loadContent('home')">Home</a></li>
-            <li><a href="#" onclick="loadContent('about')">About</a></li>
-            <li><a href="#" onclick="loadContent('services')">Services</a></li>
-            <li><a href="#" onclick="loadContent('contact')">Contact</a></li>
-        </ul>
-    </nav>
-    <div id="home" class="content active">Welcome to the Home page!</div>
-    <div id="about" class="content">About us content goes here.</div>
-    <div id="services" class="content">Our services are listed here.</div>
-    <div id="contact" class="content">Contact us through this form.</div>
-
-    <script>
-        function loadContent(sectionId) {
-            const contents = document.querySelectorAll('.content');
-            contents.forEach(content => content.classList.remove('active'));
-            document.getElementById(sectionId).classList.add('active');
-        }
-    </script>
-</body>
-</html>
-
-
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
-    <link rel="stylesheet" href="stylesheet1.css">
+    <title>Workspace</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="sidebar">
-        <ul>
-            <li class="nav-item active" onclick="showContent('home')">Home</li>
-            <li class="nav-item" onclick="showContent('customer')">Customer</li>
-            <li class="nav-item" onclick="showContent('department')">Department</li>
-            <li class="nav-item" onclick="showContent('media')">Media</li>
-        </ul>
-    </div>
-    <div class="content">
-        <div id="home" class="content-item active">
-            <h1>Home</h1>
-            <p>Welcome to the Home page!</p>
+        <div class="logo">
+            <h2>Workspace</h2>
         </div>
-        <div id="customer" class="content-item">
-            <h1>Customer</h1>
-            <p>Welcome to the Customer page!</p>
-        </div>
-        <div id="department" class="content-item">
-            <h1>Department</h1>
-            <p>Welcome to the Department page!</p>
-        </div>
-        <div id="media" class="content-item">
-            <h1>Media</h1>
-            <p>Welcome to the Media page!</p>
+        <nav>
+            <ul>
+                <li class="nav-item active" onclick="showContent('home')">Home</li>
+                <li class="nav-item" onclick="showContent('customers')">Customers</li>
+                <li class="nav-item" onclick="showContent('departments')">Departments</li>
+                <li class="nav-item" onclick="showContent('media')">Media</li>
+            </ul>
+        </nav>
+        <div class="my-account">
+            <a class="nav-item" onclick="showContent('account')">My Account</a>
         </div>
     </div>
-    <script src="script.js"></script>
+    <div id="home" class="content">
+        <header>
+            <input type="text" placeholder="Search in Home">
+            <button>🔍</button>
+        </header>
+        <div class="cards">
+            <div class="card green">
+                <h2>New Customers</h2>
+                <p>24</p>
+            </div>
+            <div class="card blue">
+                <h2>Department Activity</h2>
+                <p>434+</p>
+            </div>
+            <div class="card red">
+                <h2>Total Media Size</h2>
+                <p>10 TB</p>
+            </div>
+        </div>
+        <div class="tables">
+            <div class="table">
+                <h3>Customers</h3>
+                <table>
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Department ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Total Media Size</th>
+                    </tr>
+                    <tr>
+                        <td>JRYT456</td>
+                        <td>UHD5G</td>
+                        <td>JOHN</td>
+                        <td>skadj@gmail.com</td>
+                        <td>2 GB</td>
+                    </tr>
+                    <tr>
+                        <td>JHSAG636</td>
+                        <td>ASDFJ</td>
+                        <td>JANE</td>
+                        <td>skadj@gmail.com</td>
+                        <td>0.4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>ASJHSA77</td>
+                        <td>SAFEF</td>
+                        <td>BOB</td>
+                        <td>skadj@gmail.com</td>
+                        <td>200 GB</td>
+                    </tr>
+                    <tr>
+                        <td>KSAHKJ366</td>
+                        <td>AFEEE</td>
+                        <td>MARY</td>
+                        <td>skadj@gmail.com</td>
+                        <td>50 GB</td>
+                    </tr>
+                    <tr>
+                        <td>SAKJHD35</td>
+                        <td>REYER</td>
+                        <td>KARAN</td>
+                        <td>skadj@gmail.com</td>
+                        <td>45 GB</td>
+                    </tr>
+                    <tr>
+                        <td>KKHUASU33</td>
+                        <td>HJHGF</td>
+                        <td>CHRISSY</td>
+                        <td>skadj@gmail.com</td>
+                        <td>500 GB</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table">
+                <h3>Departments</h3>
+                <table>
+                    <tr>
+                        <th>Department ID</th>
+                        <th>Department Incharge</th>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Total Media Size</th>
+                    </tr>
+                    <tr>
+                        <td>JRYT456</td>
+                        <td>UHD5G</td>
+                        <td>JOHN</td>
+                        <td>23</td>
+                        <td>2 GB</td>
+                    </tr>
+                    <tr>
+                        <td>JHSAG636</td>
+                        <td>ASDFJ</td>
+                        <td>JANE</td>
+                        <td>45</td>
+                        <td>0.4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>ASJHSA77</td>
+                        <td>SAFEF</td>
+                        <td>BOB</td>
+                        <td>76</td>
+                        <td>200 GB</td>
+                    </tr>
+                    <tr>
+                        <td>KSAHKJ366</td>
+                        <td>AFEEE</td>
+                        <td>MARY</td>
+                        <td>87</td>
+                        <td>50 GB</td>
+                    </tr>
+                    <tr>
+                        <td>SAKJHD35</td>
+                        <td>REYER</td>
+                        <td>KARAN</td>
+                        <td>76</td>
+                        <td>45 GB</td>
+                    </tr>
+                    <tr>
+                        <td>KKHUASU33</td>
+                        <td>HJHGF</td>
+                        <td>CHRISSY</td>
+                        <td>78</td>
+                        <td>500 GB</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="media">
+            <div class="heading"> Media</div>
+            <div class="media-cards">
+                <div class="media-card">
+                    <h4>Audio</h4>
+                    <p>14 TB</p>
+                </div>
+                <div class="media-card">
+                    <h4>Video</h4>
+                    <p>14 TB</p>
+                </div>
+                <div class="media-card">
+                    <h4>Images</h4>
+                    <p>14 TB</p>
+                </div>
+                <div class="media-card">
+                    <h4>Files</h4>
+                    <p>14 TB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="customers" class="content">
+        <div class="header">
+            <header>
+                <input type="text" placeholder="Search in Customers">
+                <button>🔍</button>
+            </header>
+        </div>
+        <div class="tables">
+            <div class="table">
+            <h2>Customers</h2>
+            <table>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Department ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Total Media Size</th>
+                </tr>
+                <tr>
+                    <td>JRYT456</td>
+                    <td>UHDSG</td>
+                    <td>John</td>
+                    <td>skadj@gmail.com</td>
+                    <td>2 GB</td>
+                </tr>
+                <tr>
+                    <td>JHSAG636</td>
+                    <td>ASDFJ</td>
+                    <td>Jane</td>
+                    <td>skadj@gmail.com</td>
+                    <td>0.4 GB</td>
+                </tr>
+                <tr>
+                    <td>ASJHSA77</td>
+                    <td>SAFEF</td>
+                    <td>Bob</td>
+                    <td>skadj@gmail.com</td>
+                    <td>200 GB</td>
+                </tr>
+                <tr>
+                    <td>KSAHKJ366</td>
+                    <td>AFEEE</td>
+                    <td>Mary</td>
+                    <td>skadj@gmail.com</td>
+                    <td>50 GB</td>
+                </tr>
+                <tr>
+                    <td>SAKJHD35</td>
+                    <td>REYER</td>
+                    <td>Karan</td>
+                    <td>skadj@gmail.com</td>
+                    <td>45 GB</td>
+                </tr>
+                <tr>
+                    <td>KKHUASU33</td>
+                    <td>HJHGF</td>
+                    <td>Chrissy</td>
+                    <td>skadj@gmail.com</td>
+                    <td>500 GB</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>  
+            </table>
+        </div>
+            <div class="pagination">
+                <button>&lt;</button>
+                <button>1</button>
+                <button>&gt;</button>
+            </div>
+        </div>
+    </div>
+   </div>
+   <div id="departments" class="content">
+    <div class="header">
+        <header>
+            <input type="text" placeholder="Search in Departments">
+            <button>🔍</button>
+        </header>
+    </div>
+    <div class="tables">
+        <div class="table">
+        <h2>Departments</h2>
+            <table>
+                <tr>
+                    <th>Department ID</th>
+                    <th>Department Incharge</th>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Total Media Size</th>
+                </tr>
+                <tr>
+                    <td>JRYT456</td>
+                    <td>UHDSG</td>
+                    <td>John</td>
+                    <td>23</td>
+                    <td>2 GB</td>
+                </tr>
+                <tr>
+                    <td>JHSAG636</td>
+                    <td>ASDFJ</td>
+                    <td>Jane</td>
+                    <td>45</td>
+                    <td>0.4 GB</td>
+                </tr>
+                <tr>
+                    <td>ASJHSA77</td>
+                    <td>SAFEF</td>
+                    <td>Bob</td>
+                    <td>76</td>
+                    <td>200 GB</td>
+                </tr>
+                <tr>
+                    <td>KSAHKJ366</td>
+                    <td>AFEEE</td>
+                    <td>Mary</td>
+                    <td>87</td>
+                    <td>50 GB</td>
+                </tr>
+                <tr>
+                    <td>SAKJHD35</td>
+                    <td>REYER</td>
+                    <td>Karan</td>
+                    <td>76</td>
+                    <td>45 GB</td>
+                </tr>
+                <tr>
+                    <td>KKHUASU33</td>
+                    <td>HJHGF</td>
+                    <td>Chrissy</td>
+                    <td>78</td>
+                    <td>500 GB</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="pagination">
+                <button>&lt;</button>
+                <button>1</button>
+                <button>&gt;</button>
+            </div>
+        </div>
+    </div>
+   </div>
+   <div id="media" class="content">
+    <div class="header">
+        <header>
+        <input type="text" placeholder="Search in Media" class="searched">
+        <button>🔍</button></header>
+    </div>
+    <div class="media">
+        <div class="media-section">
+            <div><h2>IMAGES</h2></div>
+            <div class="media-grid">
+                <img src="image.jpeg" alt="image">
+                <img src="image2.jpeg" alt="image">
+                <img src="image3.jpeg" alt="image">
+                <img src="image4.jpeg" alt="image">
+                <img src="image5.jpeg" alt="image">
+                <img src="image6.jpeg" alt="image">
+            </div>
+        </div>
+        <div class="media-section">
+            <h2>VIDEO</h2>
+            <div class="media-grid">
+                <img src="image7.jpeg" alt="video">
+                <img src="image8.jpeg" alt="video">
+                <img src="image9.jpeg" alt="video">
+            </div>
+        </div>
+        <div class="media-section">
+            <h2>AUDIO</h2>
+            <div class="media-grid">
+                <img src="image10.jpeg" alt="audio">
+                <img src="image11.jpeg" alt="audio">
+                <img src="image12.jpeg" alt="audio">
+            </div>
+        </div>
+    </div>
+   </div>
+   <div id="account" class="content">
+    <div class="account">
+        <div class="account-section">
+            <img src="image10.jpeg" alt="Profile Picture">
+            <h2>My Account</h2>
+    
+            <label for="name">Name</label>
+            <div>
+                <input type="text" id="name" value="Sourav Sahoo" disabled>
+                <label alt="edit" class="edit-btn" onclick="enableEdit('name')">&#128393;</label>
+            </div>
+    
+            <label for="email">Email</label>
+            <div>
+                <input type="email" id="email" value="souravsahoo@gmail.com" disabled>
+                <label alt="edit" class="edit-btn" onclick="enableEdit('email')">&#128393;</label>
+            </div>
+    
+            <label for="phone">Phone Number</label>
+            <div>
+                <input type="text" id="phone" value="9348527068" disabled>
+                <label alt="edit" class="edit-btn" onclick="enableEdit('phone')">&#128393;</label>
+            </div>
+    
+            <label for="dob">Date Of Birth</label>
+            <div>
+                <input type="text" id="dob" value="April 01, 2002" disabled>
+                <label alt="edit" class="edit-btn" onclick="enableEdit('dob')">&#128393;</label>
+            </div>
+    
+            <div class="actions">
+                <button class="save-btn" onclick="saveChanges()">SAVE</button>
+                <button class="cancel-btn" onclick="cancelChanges()">CANCEL</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
-
--->
+  
